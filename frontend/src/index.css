@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap');
+
+body {
+  @apply bg-eggshell text-primary-600;
+  font-family: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold font-display tracking-tight;
+  color: #3A4F6F;
+}
+
+h1 {
+  @apply text-5xl sm:text-6xl md:text-7xl;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  @apply text-4xl sm:text-5xl md:text-6xl;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  @apply text-3xl sm:text-4xl md:text-5xl;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  @apply text-2xl sm:text-3xl;
+}
+
+h5 {
+  @apply text-xl sm:text-2xl;
+}
+
+h6 {
+  @apply text-lg sm:text-xl;
+}
+
+/* Fancy button styles */
+button {
+  @apply transition-all duration-300 ease-out;
+}
+
+button:not(:disabled):hover {
+  @apply transform -translate-y-0.5 shadow-lg;
+}
+
+button:not(:disabled):active {
+  @apply transform translate-y-0;
+}
+
+/* Form elements */
+input,
+select,
+textarea {
+  @apply transition-all duration-200;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+  font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  @apply ring-2 ring-accent ring-offset-0 border-accent;
+}
+
+/* Date picker styles */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  filter: invert(0.3);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  filter: invert(0.5);
+}
+
+/* Keyboard focus styles for better accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  @apply outline-none ring-2 ring-accent ring-offset-2;
+}
+
+/* High contrast mode */
+.high-contrast {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.high-contrast body {
+  @apply bg-black text-white;
+}
+
+.high-contrast * {
+  border-color: #000 !important;
+}
+
+.high-contrast input,
+.high-contrast select,
+.high-contrast textarea {
+  @apply bg-white text-black border-2 border-black;
+}
+
+.high-contrast button {
+  border-width: 2px;
+  border-color: currentColor;
+}
+
+.high-contrast .bg-primary-500 {
+  @apply bg-black text-white;
+  border: 2px solid white;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  @apply bg-gradient-to-br from-primary-500 to-primary-600;
+}
+
+.gradient-subtle {
+  @apply bg-gradient-to-br from-eggshell to-secondary-100;
+}
