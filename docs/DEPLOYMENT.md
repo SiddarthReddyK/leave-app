@@ -247,7 +247,7 @@ aws s3 sync build/ s3://eduleave-frontend/
 #### Step 5: Use in .env
 
 ```
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/eduLeave?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<database>
 ```
 
 ### Self-Hosted MongoDB
